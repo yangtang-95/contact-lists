@@ -1,0 +1,22 @@
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // Define the different category link sections you want to use
+  var hoCategoryLinks = document.getElementById("ho-category-links");
+  var otherCategoryLinks = document.getElementById("other-category-links");
+  
+  // Select the header navigation wrapper
+  var headerNavWrapper = document.querySelector(".header-nav-wrapper");
+
+  // Replace the header-nav-wrapper with ho-category-links if it exists
+  if (hoCategoryLinks && headerNavWrapper) {
+    headerNavWrapper.parentNode.insertBefore(hoCategoryLinks, headerNavWrapper);
+    headerNavWrapper.style.display = "none";
+  }
+
+  // Replace the header-nav-wrapper with other-category-links if it exists
+  if (otherCategoryLinks && headerNavWrapper) {
+    headerNavWrapper.parentNode.insertBefore(otherCategoryLinks, headerNavWrapper);
+    headerNavWrapper.style.display = "none";
+  }
+});
+</script>
